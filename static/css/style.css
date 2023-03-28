@@ -1,7 +1,7 @@
 /*----------  
  	Google fonts  
  ----------*/
-@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,400i,700,700i,900,900i|Poppins:300,400,500,600,700|Roboto:300,400,500,700");
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,400i,700,700i,900,900i|Poppins:300,400,500,600,700|Roboto:300,400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 
@@ -15,12 +15,12 @@ body {
   -moz-font-smoothing: antialiased;
 }
 
-#loader { 
-	position: fixed;
-	width: 100%;
-	height: 100vh;
-	background: #fff url('../images/loading.gif') no-repeat center;
-	z-index: 9999;
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url('../images/loading.gif') no-repeat center;
+  z-index: 9999;
 }
 
 ::selection {
@@ -29,18 +29,21 @@ body {
 }
 
 /* Heading Fonts Size */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
-  font-family: "Montserrat", serif;
-  color: #BCA371;
+  font-family: 'Montserrat', serif;
+  color: #bca371;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 200;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -66,15 +69,21 @@ p {
 /*---------- --------------
 	Themefisher help file
 ---------------------------*/
-a, .th-nav-btn, .btn {
+a,
+.th-nav-btn,
+.btn {
   text-decoration: none;
 }
 
-a:hover, .th-nav-btn:hover, .btn:hover {
+a:hover,
+.th-nav-btn:hover,
+.btn:hover {
   text-decoration: none;
 }
 
-a:focus, .th-nav-btn:focus, .btn:focus {
+a:focus,
+.th-nav-btn:focus,
+.btn:focus {
   outline: none;
   text-decoration: none;
 }
@@ -85,7 +94,8 @@ ul {
   list-style: none;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   outline: none;
 }
 
@@ -108,10 +118,10 @@ button:hover, button:focus {
   border-radius: 0;
   font-size: 20px;
   background: transparent;
-  border-color: #BCA371;
+  border-color: #bca371;
   border-width: 3px;
-  color: #BCA371;
-  font-family: "Montserrat", sans-serif;
+  color: #bca371;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -119,7 +129,8 @@ button:hover, button:focus {
   transition: 0.5s;
 }
 
-.btn-main:hover, .btn-main:focus {
+.btn-main:hover,
+.btn-main:focus {
   background: rgb(188, 163, 113);
   color: #ffffff;
   border-color: transparent;
@@ -129,11 +140,11 @@ button:hover, button:focus {
 /**/
 /* mouse hover effect */
 .hover-in {
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .hover-out {
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 /* Media Link */
@@ -156,7 +167,8 @@ button:hover, button:focus {
 }
 
 /* Full page video and popup video overrite */
-.fp-enabled body, html.fp-enabled {
+.fp-enabled body,
+html.fp-enabled {
   overflow: auto !important;
 }
 
@@ -171,7 +183,7 @@ button:hover, button:focus {
 
 .solid-btn:hover {
   background: transparent;
-  color: #BCA371;
+  color: #bca371;
 }
 
 .post-count {
@@ -202,7 +214,7 @@ button:hover, button:focus {
 
 .tf-search-btn:hover {
   background: transparent;
-  color: #BCA371;
+  color: #bca371;
   border-color: transparent;
 }
 
@@ -237,15 +249,15 @@ button:hover, button:focus {
 }
 
 .title:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   bottom: 0;
   height: 3px;
   width: 70px;
-  background: #BCA371;
+  background: #bca371;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .vh-center {
@@ -264,13 +276,13 @@ button:hover, button:focus {
   background: transparent none repeat scroll 0 0;
   margin-bottom: 0;
   border-bottom: 0;
-  transition: .3s all;
+  transition: 0.3s all;
   /* border-bottom: rgba(256, 256, 256, 0.3) 2px solid; */
   backdrop-filter: blur(3px);
 }
 
 .nav-border {
-  transition: .3s all;
+  transition: 0.3s all;
   position: absolute;
   bottom: 0px;
   left: 10%;
@@ -279,7 +291,7 @@ button:hover, button:focus {
 }
 
 .navigation-coloured {
-  background-color: #BCA371;
+  background-color: #bca371;
 }
 
 .navbar-brand {
@@ -323,7 +335,7 @@ button:hover, button:focus {
 }
 
 .menu li a:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   bottom: -2px;
@@ -331,12 +343,12 @@ button:hover, button:focus {
   width: 0;
   height: 1px;
   transition: 0.5s;
-  background: #BCA371;
+  background: #bca371;
 }
 
 .menu li a:hover {
   text-decoration: none;
-  color: #BCA371;
+  color: #bca371;
   background-color: white;
 }
 
@@ -386,7 +398,7 @@ button:hover, button:focus {
 }
 
 .header_video:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -425,7 +437,7 @@ button:hover, button:focus {
 
 /* footer title section */
 .footer-title {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   padding-bottom: 40px;
 }
@@ -456,7 +468,7 @@ button:hover, button:focus {
 }
 
 .footer-nav a:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   bottom: -2px;
@@ -464,12 +476,12 @@ button:hover, button:focus {
   width: 0;
   height: 1px;
   transition: 0.5s;
-  background: #BCA371;
+  background: #bca371;
 }
 
 .footer-nav a:hover {
   text-decoration: none;
-  color: #BCA371;
+  color: #bca371;
 }
 
 .footer-nav a:hover:before {
@@ -485,7 +497,7 @@ button:hover, button:focus {
 }
 
 .contact-address a:hover {
-  color: #BCA371;
+  color: #bca371;
 }
 
 /* Footer Media Link */
@@ -507,7 +519,7 @@ button:hover, button:focus {
 }
 
 .footer-media-link a:hover {
-  color: #BCA371;
+  color: #bca371;
 }
 
 .copyright {
@@ -532,7 +544,7 @@ button:hover, button:focus {
   text-align: center;
   /* letter-spacing: 3px; */
   background-color: rgba(188, 163, 113, 0.2);
-  background-image: url("../images/fabric.png");
+  background-image: url('../images/fabric.png');
   background-blend-mode: multiply;
 }
 
@@ -540,7 +552,7 @@ button:hover, button:focus {
 .time-section .content h4,
 .time-section .jummah span {
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.8);
@@ -565,7 +577,7 @@ button:hover, button:focus {
 }
 
 .primary {
-  color: #BCA371 !important;
+  color: #bca371 !important;
   /* background-color: white; */
   /* border: #BCA371 2px solid; */
   margin-top: 0px !important;
@@ -645,12 +657,12 @@ button:hover, button:focus {
 }
 
 .donate .details b {
-  color: #BCA371;
+  color: #bca371;
 }
 
 .donate .btn {
   margin-top: 40px;
-  background-color: #BCA371;
+  background-color: #bca371;
   color: #ffffff;
   padding: 14px 70px;
 }
@@ -698,7 +710,7 @@ button:hover, button:focus {
 
 .modal h4 {
   font-size: 30px;
-  color: #BCA371;
+  color: #bca371;
 }
 
 .modal-body p {
@@ -711,20 +723,26 @@ button:hover, button:focus {
 }
 
 .announcement.btn {
-  background-color: #BCA371;
+  background-color: #bca371;
   color: white;
   border: none;
   /* animation: blinkingBackground 1s infinite; */
 }
 
-@keyframes blinkingBackground{
-  0%		{ background-color: #BCA371; }
-  50%		{ background-color: rgb(114, 98, 67); }
-  100%  { background-color: #BCA371; }
+@keyframes blinkingBackground {
+  0% {
+    background-color: #bca371;
+  }
+  50% {
+    background-color: rgb(114, 98, 67);
+  }
+  100% {
+    background-color: #bca371;
+  }
 }
 
 .pre-img {
-   /* background-image: url("../images/hero3-min.jpg"); */
+  /* background-image: url("../images/hero3-min.jpg"); */
 }
 
 /**
@@ -804,7 +822,7 @@ button:hover, button:focus {
   .time-section .jummah span {
     font-size: 24px !important;
   }
-  
+
   .time-section .content p {
     font-size: 22px;
   }
@@ -821,7 +839,8 @@ button:hover, button:focus {
   .contact-us {
     text-align: center;
   }
-  .inner-contact-title, .inner-contact-description {
+  .inner-contact-title,
+  .inner-contact-description {
     padding-bottom: 20px;
   }
   .contact-description {
@@ -893,13 +912,12 @@ button:hover, button:focus {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
-
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 1px) and (max-width: 768px) {
- .time-section-content .container {
-   max-width: 450px;
+  .time-section-content .container {
+    max-width: 450px;
   }
 
   .donate .btn,
@@ -907,7 +925,7 @@ button:hover, button:focus {
   .time-section .btn {
     font-size: 16px;
   }
-  
+
   .time-section .content p {
     font-size: 20px;
   }

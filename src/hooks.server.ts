@@ -1,6 +1,6 @@
 import type { Handle } from '@sveltejs/kit';
 import { db } from '$lib/database';
-import { Prisma } from '@prisma/client'
+import { Prisma } from '@prisma/client';
 
 export const handle: Handle = async ({ event, resolve }) => {
   // get prayer timings

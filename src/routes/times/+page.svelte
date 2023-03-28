@@ -17,21 +17,39 @@
       <section class="pl-4 pr-10 py-10">
         <div class="grid grid-cols-3 gap-4">
           <h4>Fajr</h4>
-          <input name="fajr" value={$page.data.fajr} class="input col-span-2" type="time" required />
+          <input
+            name="fajr"
+            value={$page.data.fajr}
+            class="input col-span-2"
+            type="time"
+            required
+          />
 
           <h4>Dhur</h4>
-          <input name="dhur" value={$page.data.dhur} class="input col-span-2" type="time" required />
+          <input
+            name="dhur"
+            value={$page.data.dhur}
+            class="input col-span-2"
+            type="time"
+            required
+          />
 
           <h4>Asr</h4>
           <input name="asr" value={$page.data.asr} class="input col-span-2" type="time" required />
 
           <h4>Isha</h4>
-          <input name="isha" value={$page.data.isha} class="input col-span-2" type="time" required />
+          <input
+            name="isha"
+            value={$page.data.isha}
+            class="input col-span-2"
+            type="time"
+            required
+          />
         </div>
       </section>
       <button type="submit" class="btn variant-soft w-full rounded-md">Submit</button>
     </form>
-    
+
     <a data-sveltekit-reload href="/" class="btn variant-soft">Home</a>
 
     <form action="/logout" method="POST">

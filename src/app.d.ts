@@ -1,9 +1,9 @@
 declare namespace App {
   interface Locals {
-    times: import('@prisma/client').Time[]
+    times: import('@prisma/client').Time[];
     user: {
-      name: string
-    }
+      name: string;
+    };
   }
 
   // interface PageData {}
