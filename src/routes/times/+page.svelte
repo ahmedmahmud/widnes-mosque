@@ -1,18 +1,7 @@
 <script lang="ts">
-    import type { PageServerData } from './$types';
+  import type { PageServerData } from './$types';
 
-    const get_time = (date: Date): string => {
-      return date.toTimeString().split(' ')[0].slice(0, -3);
-    };
-
-    export let data: PageServerData;
-    const times = {
-      fajr: get_time(data.fajr),
-      dhur: get_time(data.dhur),
-      asr: get_time(data.asr),
-      isha: get_time(data.isha),
-      jummah: get_time(data.jummah)
-    };
+  export let data: PageServerData;
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center place-content-center">
@@ -30,43 +19,19 @@
       <section class="pl-4 pr-10 py-10">
         <div class="grid grid-cols-3 gap-4">
           <h4>Fajr</h4>
-          <input
-            name="fajr"
-            value={times.fajr}
-            class="input col-span-2"
-            type="time"
-            required
-          />
+          <input name="fajr" value={data.fajr} class="input col-span-2" type="time" required />
 
           <h4>Dhur</h4>
-          <input
-            name="dhur"
-            value={times.dhur}
-            class="input col-span-2"
-            type="time"
-            required
-          />
+          <input name="dhur" value={data.dhur} class="input col-span-2" type="time" required />
 
           <h4>Asr</h4>
-          <input name="asr" value={times.asr} class="input col-span-2" type="time" required />
+          <input name="asr" value={data.asr} class="input col-span-2" type="time" required />
 
           <h4>Isha</h4>
-          <input
-            name="isha"
-            value={times.isha}
-            class="input col-span-2"
-            type="time"
-            required
-          />
+          <input name="isha" value={data.isha} class="input col-span-2" type="time" required />
 
           <h4>Jummah</h4>
-          <input
-            name="jummah"
-            value={times.jummah}
-            class="input col-span-2"
-            type="time"
-            required
-          />
+          <input name="jummah" value={data.jummah} class="input col-span-2" type="time" required />
         </div>
       </section>
       <button type="submit" class="btn variant-soft w-full rounded-md">Submit</button>

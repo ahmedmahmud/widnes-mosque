@@ -1,20 +1,11 @@
 <script lang="ts">
-  import type { PageData, PageServerData } from './$types';
+  import type { PageServerData } from './$types';
 
   const get_time = (date: Date): string => {
     return date.toTimeString().split(' ')[0].slice(0, -3);
   };
 
   export let data: PageServerData;
-  const times = {
-    fajr: get_time(data.fajr),
-    dhur: get_time(data.dhur),
-    asr: get_time(data.asr),
-    sunset: get_time(data.sunset),
-    isha: get_time(data.isha),
-    jummah: get_time(data.jummah)
-  };
-  // export let data: PageData;
 </script>
 
 <link
@@ -84,28 +75,28 @@
       <div class="grid lg:grid-cols-5 items-center">
         <div class="content">
           <h4>FAJR</h4>
-          <p>{times.fajr}</p>
+          <p>{data.fajr}</p>
         </div>
         <div class="content">
           <h4>DHUHR</h4>
-          <p>{times.dhur}</p>
+          <p>{data.dhur}</p>
         </div>
         <div class="content">
           <h4>ASR</h4>
-          <p>{times.asr}</p>
+          <p>{data.asr}</p>
         </div>
         <div class="content">
           <h4>MAGHRIB</h4>
-          <p>{times.sunset}</p>
+          <p>{get_time(data.sunset)}</p>
         </div>
         <div class="content">
           <h4>ISHA</h4>
-          <p>{times.isha}</p>
+          <p>{data.isha}</p>
         </div>
       </div>
       <div class="mt-5 content">
         <h4>JUMMAH</h4>
-        <p>{times.jummah}</p>
+        <p>{data.jummah}</p>
       </div>
     </div>
     <!-- <a href="images/April2022Timetable.jpeg" download="April2022Timetable.jpeg"
