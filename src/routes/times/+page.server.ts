@@ -14,13 +14,12 @@ export const load: PageServerLoad = async ({ locals }) => {
     throw redirect(302, '/login');
   }
 
-  console.log(get_time(locals.times.find((p) => p.name == 'fajr')));
-
   return {
     fajr: get_time(locals.times.find((p) => p.name == 'fajr')),
     dhur: get_time(locals.times.find((p) => p.name == 'dhur')),
     asr: get_time(locals.times.find((p) => p.name == 'asr')),
-    isha: get_time(locals.times.find((p) => p.name == 'isha'))
+    isha: get_time(locals.times.find((p) => p.name == 'isha')),
+    jummah: get_time(locals.times.find((p) => p.name == 'jummah'))
   };
 };
 
@@ -32,7 +31,7 @@ const change_time: Action = async ({ locals, request }) => {
     time: FormDataEntryValue | null;
   }
 
-  const times: prayer_time[] = ['fajr', 'dhur', 'asr', 'isha'].map((p) => ({
+  const times: prayer_time[] = ['fajr', 'dhur', 'asr', 'isha', 'jummah'].map((p) => ({
     name: p,
     time: data.get(p)
   }));
@@ -44,7 +43,7 @@ const change_time: Action = async ({ locals, request }) => {
       const time = new Date();
       time.setHours(+split_time[0]);
       time.setMinutes(+split_time[1]);
-      console.log(prayer.name, time);
+      // console.log(prayer.name, time);
 
       await db.time.update({
         where: {

@@ -45,6 +45,15 @@
             type="time"
             required
           />
+
+          <h4>Jummah</h4>
+          <input
+            name="jummah"
+            value={$page.data.jummah}
+            class="input col-span-2"
+            type="time"
+            required
+          />
         </div>
       </section>
       <button type="submit" class="btn variant-soft w-full rounded-md">Submit</button>
