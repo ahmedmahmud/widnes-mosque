@@ -19,6 +19,6 @@ export const load: PageServerLoad = (async ({ locals }) => {
     asr: get_time(locals.times.find((p) => p.name == 'asr')),
     sunset,
     isha: get_time(locals.times.find((p) => p.name == 'isha')),
-    jummah: get_time(locals.times.find((p) => p.name == 'jummah')),
+    jummah: get_time(locals.times.find((p) => p.name == 'jummah'))
   };
 }) satisfies PageServerLoad;

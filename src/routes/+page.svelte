@@ -3,7 +3,7 @@
 
   const get_time = (date: Date): string => {
     return date.toTimeString().split(' ')[0].slice(0, -3);
-};
+  };
 
   export let data: PageServerData;
   const times = {
@@ -12,8 +12,8 @@
     asr: get_time(data.asr),
     sunset: get_time(data.sunset),
     isha: get_time(data.isha),
-    jummah: get_time(data.jummah),
-  }
+    jummah: get_time(data.jummah)
+  };
   // export let data: PageData;
 </script>
 
@@ -101,7 +101,7 @@
         <div class="content">
           <h4>ISHA</h4>
           <p>{times.isha}</p>
-        </div> 
+        </div>
       </div>
       <div class="mt-5 content">
         <h4>JUMMAH</h4>
@@ -146,17 +146,17 @@
               aria-label="Slide 3"
             />
             <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          />
-          <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="4"
-          aria-label="Slide 5"
-        />
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            />
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            />
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
