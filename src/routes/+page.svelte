@@ -1,5 +1,9 @@
-<script type="ts">
-  import { page } from '$app/stores';
+<script lang="ts">
+  import type { PageData, PageServerData } from './$types';
+
+  // export let data;
+  export let data: PageServerData;
+  // export let data: PageData;
 </script>
 
 <link
@@ -69,29 +73,29 @@
       <div class="grid lg:grid-cols-5 items-center">
         <div class="content">
           <h4>FAJR</h4>
-          <p>{$page.data.fajr}</p>
+          <p>{data.fajr}</p>
         </div>
         <div class="content">
           <h4>DHUHR</h4>
-          <p>{$page.data.dhur}</p>
+          <p>{data.dhur}</p>
         </div>
         <div class="content">
           <h4>ASR</h4>
-          <p>{$page.data.asr}</p>
+          <p>{data.asr}</p>
         </div>
         <div class="content">
           <h4>MAGHRIB</h4>
-          <p>{$page.data.maghrib}</p>
+          <p>{data.sunsetTime}</p>
         </div>
         <div class="content">
           <h4>ISHA</h4>
-          <p>{$page.data.isha}</p>
+          <p>{data.isha}</p>
         </div>
       </div>
     </div>
-    <a href="images/April2022Timetable.jpeg" download="April2022Timetable.jpeg"
+    <!-- <a href="images/April2022Timetable.jpeg" download="April2022Timetable.jpeg"
       ><button class="btn btn-default btn-main">View Timetable</button></a
-    >
+    > -->
   </div>
 </section>
 
@@ -126,9 +130,27 @@
               data-bs-slide-to="2"
               aria-label="Slide 3"
             />
+            <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          />
+          <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        />
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <img src="images/new_front.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="images/new_front_2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
               <img src="images/front1.jpg" class="d-block w-100" alt="..." />
             </div>
             <div class="carousel-item">
@@ -254,8 +276,12 @@
     <div class="footer-top row">
       <!-- <div class="col-md-4"> -->
       <div class="footer-address">
-        <h3 class="footer-title">Address</h3>
+        <h3 class="footer-title p-0">Address</h3>
         <p>31-35 Alforde St, Widnes. WA8 7TR</p>
+      </div>
+      <div class="footer-address">
+        <h3 class="footer-title p-0">Phone</h3>
+        <p>07401 417272</p>
       </div>
       <!-- </div> -->
       <!-- <div class="col-md-4">
@@ -285,6 +311,7 @@
           <li><a href="#directions">Directions</a></li>
           <li><a href="#donate">Donate</a></li>
           <li><a href="#about">About Us</a></li>
+          <li><a data-sveltekit-reload href="/times">Edit Times</a></li>
         </ul>
       </div>
     </div>
