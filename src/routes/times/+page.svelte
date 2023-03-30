@@ -1,5 +1,18 @@
-<script type="ts">
-  import { page } from '$app/stores';
+<script lang="ts">
+    import type { PageServerData } from './$types';
+
+    const get_time = (date: Date): string => {
+      return date.toTimeString().split(' ')[0].slice(0, -3);
+    };
+
+    export let data: PageServerData;
+    const times = {
+      fajr: get_time(data.fajr),
+      dhur: get_time(data.dhur),
+      asr: get_time(data.asr),
+      isha: get_time(data.isha),
+      jummah: get_time(data.jummah)
+    };
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center place-content-center">
@@ -19,7 +32,7 @@
           <h4>Fajr</h4>
           <input
             name="fajr"
-            value={$page.data.fajr}
+            value={times.fajr}
             class="input col-span-2"
             type="time"
             required
@@ -28,19 +41,19 @@
           <h4>Dhur</h4>
           <input
             name="dhur"
-            value={$page.data.dhur}
+            value={times.dhur}
             class="input col-span-2"
             type="time"
             required
           />
 
           <h4>Asr</h4>
-          <input name="asr" value={$page.data.asr} class="input col-span-2" type="time" required />
+          <input name="asr" value={times.asr} class="input col-span-2" type="time" required />
 
           <h4>Isha</h4>
           <input
             name="isha"
-            value={$page.data.isha}
+            value={times.isha}
             class="input col-span-2"
             type="time"
             required
@@ -49,7 +62,7 @@
           <h4>Jummah</h4>
           <input
             name="jummah"
-            value={$page.data.jummah}
+            value={times.jummah}
             class="input col-span-2"
             type="time"
             required
